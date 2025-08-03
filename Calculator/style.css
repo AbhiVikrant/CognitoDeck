@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(11, 224, 163);
+    background-image: linear-gradient(135deg, rgb(11, 224, 163)  0%, rgb(5, 87, 64)   100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.calculator{
+    background: #000;
+    width: 50vw;
+    border-radius: 10px;
+}
+.text_input{
+    margin-bottom: 25px;
+    padding: 15px;
+}
+.text_input p{
+      width: 100%;
+      text-align: end;
+      font-size: 3.5rem;
+      background: transparent;
+      border: none;
+      outline: none;
+      word-wrap: break-word;
+      word-break:break-all;
+      color: #fff;
+}
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    height: 100%;
+}
+.key-button{
+    background: #333;
+    color: #fff;
+    font-size: 2.5rem;
+    border: solid 1px white;
+    border-radius:10px;
+    cursor: pointer;
+}
+.key-button:active, .key-button:focus{
+    filter: brightness(145%);
+}
+.specialKey {
+    background: rgb(20, 196, 4);
+}
+

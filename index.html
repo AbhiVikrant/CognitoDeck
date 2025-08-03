@@ -1,77 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do App</title>
-    <!-- style import -->
-     <link rel="stylesheet" href="style.css">
-  
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1> To Do App </h1>
-        </header>
-        <div class="main">
-            <label for="text">Enter Your Task: </label> 
-            <input type="text" id="text" name="text" placeholder="Enter Activity">
-            <button id="addButton" name="addButton" type="button">Add Button</button>
-            <!-- error box -->
-         <div id="errorMessageBox" class="alert-box">
-            <span class="close-button" onclick= "hideErrorMessage()">&times;</span>
-             <p id="errorMessage"></p>
-         </div>
-         <!-- error ends -->
-        </div>
-        
-        <div id="dataBox">
-            <table>
-                <thead>
-                   <tr>
-                     <th scope="col">
-                        Serial Number
-                    </th>
-                    <th scope="col">
-                        Activity to do
-                    </th>
-                    <th scope="col">
-                        Date & Time of creation
-                    </th>
-                    <th scope="col">
-                        Last Updated Time
-                    </th>
-                    <th scope="col">Status</th>
-                    <th scope="col "colspan="2"> Buttons</th>
-                   </tr>
-                </thead>
-                <tbody id="tbody">
-                    <tr>
-                        <td>22</td>
-                        <td>22</td>
-                        <td>22</td>
-                        <td>22</td>
-                        <td>Pending</td>
-                        <td>22</td>
-                        <td>22</td>
-                        <!--  <label class="switch"> -->
-                        <!-- <input type="checkbox" id="checkbox-button-${index}" name="checkbox" !checked>
-                                   <span class="slider round" onclick="handleStatus(${index})"></span>
-                             </label>
-                              ${data.status} -->
-                              <!-- <td>
-                            <div class="togleBox">
-                               <input type="range" name="point" min="1" step="1" id="custom-toggle${index}" class="tgl-def custom-toggle"
-                                max="3" value="1" onchange="filterme(this.value, ${index});">
-                            </div>
-                            <span>${data.status}</span>
-                        </td> -->
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-     <!-- import script -->
-    <script src="script.js"  type="text/javascript" ></script>
-</body>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="This page contains all links related to daily uses activity like to-do-app, calculator, weather.">
+      <meta name="keywords" content="HTML, CSS, JavaScript, Learning, AbhiVikrant">
+      <meta name="author" content="Abhishek Kumar Vikrant">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Cognito Deck</title>
+      <!-- stylesheet -->
+       <link rel="stylesheet" href="common.css">
+    </head>
+    <body>
+        <div class="card">
+            <h1 id="typingTitle"></h1>
+            <p id="typingPara"></p>        
+            <div id="exploreSection" class="explore-section">
+                <label for="linkSelect">Explore my work:</label>
+                <select id="linkSelect">
+                  <option value="">-- Choose a link --</option>
+                  <option value="to-do-app/index.html">To Do Web App</option>
+                  <option value="calculator/index.html">Calculator</option>
+                  <option value="WorkingAddListLikeToDo/index.html">Working Add List Like To Do</option>
+                </select>
+              </div>
+          </div>
+          <!-- js -->
+           <script src="common.js" type="text/JavaScript"></script>
+    </body>
 </html>
