@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Web App</title>
+    <link href="index.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <div class="mainHeader">
+            <h1>
+                Create Your Daily Working List
+            </h1>
+            <img src="images/todo.png" alt="todolist" height="60px" width="60px"/>
+        </div>
+        <hr class="line">
+        <div class="textField">
+            <input type="text" name="textEnter" id="textEnter" placeholder="Enter Your Working List" />
+            <button type="button" class="addButton" onclick="addTodo()"><span>+</span></button>
+        </div>
+        <ul class="mainListDiv" id="todoList"></ul>
+    </div>
+
+    <!-- external script -->
+     <script src="index.js" type="text/javascript" defer ></script>
+</body>
+</html>
