@@ -72,10 +72,12 @@ if(charIndex<char.length && leftTime>0)
          char[charIndex].classList.add('incorrect');
         //  console.log('incorrect');
     }
+     charIndex++;
     mistakes.innerText=mistake;
-    char[charIndex].classList.add('active');
+   
     (charIndex-mistake)==-1? cpm.innerText= 0 : cpm.innerText=(charIndex-mistake);
-     charIndex++;   
+       
+      char[charIndex].classList.add('active');
 }
 else
 {
