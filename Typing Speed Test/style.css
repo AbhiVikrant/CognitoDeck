@@ -1,16 +1,101 @@
-*
-{
+
+
+*{
     margin: 0;
     padding: 0;
-    font-family:'Courier New', Courier, monospace;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-body
-{
+body{
     display: flex;
-    padding: 0 12px;
+    padding: 0 10px;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: radial-gradient( circle 759px at -6.7% 50%, rgba(80,131,73,1) 0%, rgba(140,209,131,1) 26.2%, rgba(178,231,170,1) 50.6%, rgba(144,213,135,1) 74.1%, rgba(75,118,69,1) 100.3% );
+    background-image: linear-gradient(45deg, rgb(86, 86, 129) 0% ,rgb(81, 81, 156) 50%, rgb(95, 95, 218)100% );
 }
+.wrapper{
+    width: 770px;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 15px 15px 20px rgba(0,0,0, 0.5);
+}
+ .wrapper input{
+     position: absolute;
+     padding: 0 10px 20px ;
+     opacity: 0;
+  
+}
+.wrapper .content-box
+{
+    padding: 13px 20px 0px;
+    border-radius: 10px;
+    border: 1px solid #bfbfbf;
+}
+
+ .content-box .content
+ {
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #bfbfbf;
+
+ }
+ .content .result-details
+ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 140px);
+    padding: 10px
+ }
+ .result-details li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+    gap: 5px;
+    min-height: 20px;
+ }
+ .content button{
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: orange;
+    cursor: pointer;
+    padding: 0 12px;
+    width: 100px;
+    font-size: 16px;
+    min-height: 18px;
+    border-radius: 5px;
+    transition: transform 0.3 ease;
+ }
+ .content button:hover{
+    transform:scale(0.8)
+ }
+ .content button:active{
+    background-color: rgb(9, 163, 210);
+ }
+ .typing-text p span{
+    position: relative;
+ }
+  .typing-text p span.active
+  {
+    color: orange;
+  }
+  .typing-text p span.correct
+  {
+    color: green;
+  }
+  .typing-text p span.incorrect
+  {
+    color: red;
+    outline: 1px solid #bfbfbfbf;
+    background-color: #bfbfbfda ;
+  }
+  ::selection
+  {
+    background-color: aquamarine;
+  }
