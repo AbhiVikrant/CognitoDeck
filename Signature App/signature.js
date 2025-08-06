@@ -7,20 +7,35 @@ const savebtn=document.getElementById('save-button');
 const retrievebtn=document.getElementById('retrieve-button');
 // console.log(colorPicker,backgroundColor,font,canvas,clrbtn,savebtn,retrievebtn);
 const ctx=canvas.getContext('2d');
-  ctx.strokeStyle=(colorPicker.value);
-    ctx.fillStyle=backgroundColor.value;
-    ctx.lineWidth=font.value/5;
-    console.log(font.value)
-     ctx.fillRect(0,0,840,420);
+// canvas.width = canvas.offsetWidth;
+// canvas.height = canvas.offsetHeight;
+// ctx.fillRect(0, 0, canvas.width, canvas.height);
+//     ctx.strokeStyle=(colorPicker.value);
+//     ctx.fillStyle=backgroundColor.value;
+//     ctx.lineWidth=font.value/5;
+//     // console.log(font.value)
+//      ctx.fillRect(0,0,canvas.width,canvas.height);
+function resizeCanvas() {
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width;
+    canvas.height = rect.height;
+
+    // Re-fill the background (after resize, canvas clears)
+    ctx.fillStyle = backgroundColor.value;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = colorPicker.value;
+    ctx.lineWidth = font.value / 5;
+}
+resizeCanvas();
 let isDrawing=false;
 let lastX=0,lastY=0;
 //  set pen color
-colorPicker.addEventListener('change', (e)=>
+colorPicker.addEventListener('input', (e)=>
 {
     ctx.strokeStyle=(e.target.value);
     ctx.fillStyle=e.target.value;
 });
-backgroundColor.addEventListener('change', (e)=>
+backgroundColor.addEventListener('input', (e)=>
 {
     ctx.fillStyle=e.target.value;
     ctx.fillRect(0,0,820,420);
@@ -86,29 +101,37 @@ retrievebtn.addEventListener('click',()=>
 })
 
 // mobile touch
-
-canvas.addEventListener('touchstart', (e)=>
-{
-    isDrawing=true;
-    lastX=e.offsetX;
-    lastY=e.offsetY;
-});
-canvas.addEventListener('touchmove', (e)=>
-{
-   if(isDrawing)
-   {
-    ctx.beginPath();
-    ctx.moveTo(lastX,lastY);
-    ctx.lineTo(e.offsetX,e.offsetY);
-    ctx.stroke();
-
-    lastX=e.offsetX;
-    lastY=e.offsetY;
-   }
-});
-canvas.addEventListener('touchend',(e)=>
-{
-    isDrawing=false;
+function getTouchPos(canvas, touchEvent) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+        x: touchEvent.touches[0].clientX - rect.left,
+        y: touchEvent.touches[0].clientY - rect.top
+    };
 }
-);
 
+canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    isDrawing = true;
+    const pos = getTouchPos(canvas, e);
+    lastX = pos.x;
+    lastY = pos.y;
+});
+
+canvas.addEventListener('touchmove', (e) => {
+    if (!isDrawing) return;
+    e.preventDefault();
+    const pos = getTouchPos(canvas, e);
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(pos.x, pos.y);
+    ctx.stroke();
+    lastX = pos.x;
+    lastY = pos.y;
+});
+
+canvas.addEventListener('touchend', (e) => {
+    isDrawing = false;
+});
+
+//resize again when window size changes
+window.addEventListener('resize', resizeCanvas);
