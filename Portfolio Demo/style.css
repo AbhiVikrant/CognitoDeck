@@ -1,0 +1,144 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main
+{
+    background-color: antiquewhite;
+    display: flex;
+    padding: 100px;
+    min-height: 100vh;
+    position: relative;
+}
+.main header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    justify-content: space-between;
+    align-items: center;
+     transition: 0.5s;
+}
+header .logo
+{
+    display: inline;
+    float: left;
+
+}
+.logo a
+{
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 800;
+     transition: 0.5s;
+
+}
+.logo a p>span{
+    font-size: 3em;
+    color: orange;
+     transition: 1s;
+}
+nav ul
+{
+    display: flex;
+    gap: 40px;
+    padding: 20px 100px;
+    align-items: center;
+    justify-content: center;
+     transition: 1s;
+
+}
+nav ul li
+{
+    list-style: none;
+}
+nav ul li a{
+text-decoration: none;
+font-weight: 500;
+font-size: 1.2em;
+color: #333;
+ transition: 1s;
+}
+#theme-toggle
+{
+    position: absolute;
+    right: 0;
+    display: inline-flex;
+     align-items: center;
+    justify-content: center;
+     gap: 40px;
+     top: 20px;
+    padding: 20px 100px;
+     transition: 1s;
+
+}
+.content
+{
+     padding: 20px 100px;
+    position: relative;
+    margin: 100px 0;
+}
+.content h2
+{
+    color: #333;
+    font-size: 5.2em;
+    transition: 1s;
+}
+.content h2 span
+{
+    color: orange;
+
+}
+.content p
+{
+    color: #666;
+    font-size:1.2em ;
+    transition: 1s;
+    margin: 10px 0;
+}
+.content button
+{
+    position: relative;
+    outline: none;
+    background-color: orange;
+    border: none;
+    color: #FFF;
+    padding: 10px 35px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-right:  35px;
+    transition: 1s;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+.content .chat
+{
+    background-color: transparent;
+    color: #666;
+}
+#theme-toggle ion-icon:nth-child(2),
+.main.night #theme-toggle ion-icon:nth-child(1)
+{
+    display: none;
+}
+.main.night #theme-toggle ion-icon:nth-child(2)
+{
+    display: block;
+}
+.main.night
+{
+    background-color: #333;
+    color: #fff;
+}
+.main.night .logo a, .main.night nav ul li a,.main.night .content h2, .main.night .content p,.main.night .content .chat
+{
+    color: #fff;
+}
+
+/* media */
