@@ -1,0 +1,56 @@
+*
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.conatiner
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin-top: 40px;
+}
+.conatiner h2{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 32px;
+}
+.conatiner p
+{
+    margin-top: 32px;
+    font-size: 1rem;
+    color: rgb(36, 37, 37);
+    padding: 12px;
+}
+.btn-container
+{
+    padding: 12px;
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.btn-container button
+{
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow:2px 2px 8px 2px  rgb(179, 186, 186);
+    padding: 12px;
+    
+}
+.log,.state
+{
+    width: 550px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow:2px 2px 8px 2px  rgb(179, 186, 186);
+    padding: 12px;
+    text-align: center;
+    min-height: 75px;
+}
