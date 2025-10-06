@@ -1,0 +1,28 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     height: 100vh;
+}
+.textShow
+{
+    margin: 15px 0px;
+    color: rgb(9, 237, 161);
+}
+button
+{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    min-width: 100px; /* Minimum width for buttons */
+}
