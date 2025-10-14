@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showing all country list </title>
+     <link rel="stylesheet" href="country.css">
+    
+</head>
+<body>
+    <div class="main" >
+        <header>
+            <h1>Country List</h1>
+        </header>
+        <section>
+            <p>Here you can search any country using search field. Here I am implementing it using an async function to 
+                fetch data using API and handle error using try and catch block
+            </p>
+        </section>
+        <div class="filterArea">
+            <input
+            type="text"
+            placeholder="Enter Country name to search"
+            id="search"
+            />
+            <button id="submit" onclick="handleSubmit()">Submit</button>
+        </div>
+        <div id="countryLists">
+                <!-- <div class="card">
+                    <div class="card-img">
+                        <img src="img1.jfif" alt="country-image" class="country-image">
+                    </div>
+                    <div class="card-content">
+                        <h2>Country Name: England </h2>
+                        <p>Population: 383883</p>
+                        <p>Region: hfhh</p>
+                    </div>
+                </div> -->
+                
+         </div>
+     <script src="country.js"></script>
+</body>
+</html>
