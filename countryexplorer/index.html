@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Expolrer App</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🌍 Country Explorer</h1>
+    <div class="controls">
+        <input 
+        type="text"
+        placeholder="Search Country"
+        id="text"
+        />
+        <select id="regionFilter">
+            <option value="">All Regions</option>
+             <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+             <option value="Oceania">Oceania</option>
+        </select>
+    </div>
+    <div id="countryLists"></div>
+    <div id="pagination"></div>
+    <script src="index.js"></script>
+</body>
+</html>
