@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product API products listing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>Products Listing</h1>
+        <div class="productFiterArea">
+            <div class="searchProduct">
+                <input
+                type="text"
+                placeholder="Enter product name or categories to search"
+                class="inputField"
+                />
+                <div class="sortOptions">
+                    <select id="sort">
+                        <option value="">No Sort</option>
+                        <option value="asc">Sort A - Z</option>
+                        <option value="desc">Sort Z - A</option>
+                        <option value="low-high">Sort Low to High</option>
+                        <option value="high-low">Sort High to Low</option>
+                        <option value="low-high-rating">Sort Low to High Rating</option>
+                        <option value="high-low-rating">Sort High to Low Rating</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="productLists"></div>
+        <div class="paginationDiv"></div>
+        <script src="index.js"></script>
+        <!--   -->
+</body>
+</html>
